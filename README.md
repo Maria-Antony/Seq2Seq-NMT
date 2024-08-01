@@ -21,9 +21,36 @@ The results of the trained models, including BLEU scores and qualitative analysi
 
 Source Text: The content of the proposal concerns the average 48-hour working week of
 doctors, with the possibility, following negotiation, of increasing it to 54 hours.
+
 Target Text: (German) Dieser Vorschlag sieht eine durchschnittliche wöchentliche Arbeitszeit für Ärzte von 48 Stunden vor, die nach Vereinbarung bis zu 54 Stunden betragen kann.
+
 Basic Predicted Text: Der Inhalt des Vorschlags bezieht sich auf die durchschnittliche 48-Stunden-Woche der Ärzte mit der Möglichkeit, sie nach Verhandlungen auf 54 Stunden zu erhöhen.
+
 Fine Tuned Predicted Text: Der Vorschlag bezieht sich im Inhalt auf die durchschnittliche 48-Stunden-Woche-Beschäftigung von Ärzten mit der Möglichkeit, sie nach Verhandlungen auf 54 Stunden zu erhöhen.
 
+![MBart Results](images/image_2024-08-01_124802743.png)
 
+### NLLB
 
+Source Text: It is now February and we are still waiting.
+
+Target Text (Dutch): Het kan goed zijn dat de anderen geen haar beter zijn, maar dat helpt ons niet.
+
+Predicted Text (Basic) : È ora febbraio e stiamo ancora aspettando. 
+
+Predicted Text(Fine tuned):Het is nu februari en we wachten nog steeds.
+
+![NLLB Results](images/image_2024-08-01_124838722.png)
+
+### MarianMT
+
+#### Dutch Model
+Source Text: Mr President, the European Parliament is today facing an important decision. 
+
+Target Text: Mijnheer de Voorzitter, beste collega's, het Europees Parlement staat vandaag voor een belangrijke beslissing.
+
+Predicted Text (Basic): Mijnheer de Voorzitter, het Europees Parlement staat vandaag voor een belangrijk besluit.
+
+Predicted Text(Fine-tuned): Mijnheer de Voorzitter, het Europees Parlement staat vandaag voor een belangrijke beslissing.
+
+![MarianMT Results](images/image_2024-08-01_124910077.png)
