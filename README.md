@@ -1,7 +1,7 @@
 # Overview
 This project focuses on developing and fine-tuning various sequence-to-sequence (Seq2Seq) models using the Europarl dataset. The models employed in this project include MBart, MarianMT, and NLLB transformer models. Additionally, a basic Seq2Seq model utilizing Byte Pair Encoding (BPE) and multilingual vocabulary with Bahdanau Attention and GRUs has been developed.
 
-#Models
+# Models
 ## MBart
 MBart is a multilingual BART model that has been fine-tuned on the Europarl dataset to enhance its translation capabilities across multiple languages.
 
