@@ -3,16 +3,16 @@ This project focuses on developing and fine-tuning various sequence-to-sequence 
 
 # Models
 ## MBart
-MBart is a multilingual BART model that has been fine-tuned on the Europarl dataset to enhance its translation capabilities across multiple languages.
+An Encoder-Decoder model that can handle multilingual translations. This model behaves like an autoregressive model used for images where in place of image, corrupted text is learnt by the model to produce correct translations and uses SentencePiece tokenization method. The model is built of 12 layers of encoder and decoder with a total of 680M parameters.
 
 ## MarianMT
-MarianMT is a machine translation model developed by the Marian team. This project involves fine-tuning MarianMT on the Europarl dataset to improve its translation accuracy and efficiency.
+The MarianMT is a similar model where a single model will not support all languages. The above models exist where a single model supports multilingual translation. Here we have to change source and target language codes. The cross attention mechanism is a key component in MarianMT's architecture where it enables the decoder to attend to the encoded representations of the source sentence while generating the translation.
 
 ## NLLB
-NLLB (No Language Left Behind) is a transformer model focused on translation tasks. This project includes fine-tuning NLLB on the Europarl dataset to support multilingual translation.
+NLLB is another multilingual model devised to offer high-quality translations for a wide array of languages, including low-resource languages. In NLLB there is a concept called Noisy Channel Mode which introduces random perturbations to input text, mimicking real-world noise. This forces the model to learn robust representations, improving translation accuracy, especially for low-resource languages with limited clean data.
 
 ## Custom Seq2Seq Model
-A custom Seq2Seq model has been developed using Byte Pair Encoding (BPE) for tokenization and multilingual vocabulary. This model utilizes Bahdanau Attention with GRU units to perform translation tasks.
+We developed a basic model following the pytorch implementation using Bahdanau Attention. We used Byte Pair Encoding which has a multilingual vocabulary of size 100K. We encoded our input and target text with target text having a target language and the input text with a prefix which has: Translate to [Target Language]. We got the word indices and padded it to a dimension of 300 and made it pass through the encoder and learn. This development required more computing resources, but have provided the code on how we developed it.
 
 ## Results
 The results of the trained models, including BLEU scores and qualitative analysis, are documented and MBart model worked fine upon Fine Tuning.
@@ -54,3 +54,6 @@ Predicted Text (Basic): Mijnheer de Voorzitter, het Europees Parlement staat van
 Predicted Text(Fine-tuned): Mijnheer de Voorzitter, het Europees Parlement staat vandaag voor een belangrijke beslissing.
 
 ![MarianMT Results](images/image_2024-08-01_124910077.png)
+
+# Improvements
+Training MBART for more epochs can give us good results. Also, there can be a good chance if Reinforcement Learning can improve the translation process. Using Reinforcement Learning with Human Feedback will improve NLP models taking it to new heights.
