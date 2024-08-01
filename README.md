@@ -14,7 +14,7 @@ NLLB is another multilingual model devised to offer high-quality translations fo
 ## Custom Seq2Seq Model
 We developed a basic model following the pytorch implementation using Bahdanau Attention. We used Byte Pair Encoding which has a multilingual vocabulary of size 100K. We encoded our input and target text with target text having a target language and the input text with a prefix which has: Translate to [Target Language]. We got the word indices and padded it to a dimension of 300 and made it pass through the encoder and learn. This development required more computing resources, but have provided the code on how we developed it.
 
-## Results
+# Results
 The results of the trained models, including BLEU scores and qualitative analysis, are documented and MBart model worked fine upon Fine Tuning.
 
 ### MBart 
