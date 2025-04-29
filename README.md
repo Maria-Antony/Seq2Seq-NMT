@@ -59,7 +59,7 @@ Predicted Text(Fine-tuned): Mijnheer de Voorzitter, het Europees Parlement staat
 Training MBART for more epochs can give us good results. Also, there can be a good chance if Reinforcement Learning can improve the translation process. Using Reinforcement Learning with Human Feedback will improve NLP models taking it to new heights.
 
 # Web Interface
-We developed a web interface by selecting the most performed model which is MBart. We pushed our model to a HuggingFace repo and directly call and use it. The development was made usign Python Streamlit.
+We developed a web interface by selecting the most performed model which is MBart. We pushed our model to a HuggingFace repo and directly call and use it. The development was made using Python Streamlit.
 
 ![Web Interface](images/image_2024-08-01_125710587.png)
 
